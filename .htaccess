@@ -1,0 +1,12 @@
+#Options -indexes
+RewriteEngine On
+RewriteBase /admin/
+
+RewriteRule ^profile$ index.php?page=profile [L,NC]
+RewriteRule ^login$ front-end/auth/front-end/login.php [L,NC]
+RewriteRule ^forgot-password$ front-end/auth/front-end/forgot-password.php [L,NC]
+RewriteRule ^general-settings$ index.php?page=general-settings [L,NC]
+RewriteRule ^logo-settings$ index.php?page=logo-settings [L,NC]
+RewriteRule ^contact-settings$ index.php?page=contact-settings [L,NC]
+RewriteRule ^hosting-settings$ index.php?page=hosting-settings [L,NC]
+
