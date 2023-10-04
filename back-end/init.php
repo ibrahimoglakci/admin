@@ -8,6 +8,7 @@ include_once("back-end/class/Users.php");
 include_once("back-end/actions/functions.php");
 include_once("back-end/actions/config.php");
 include_once("back-end/class/CSRF.php");
+include_once("back-end/class/BankAccounts.php");
 $settings = DB::table("settings")->where("ID", 1)->first();
 
 define("ADMIN", $settings->adminUrl);
@@ -31,10 +32,9 @@ if (isset($_COOKIE["lang"])) {
     $defaultLang = substr($defaultLang, 0, 2);
     $langdata = file_get_contents(BACK_END . 'lang/lang_' . $defaultLang . '.json');
     $langdata = json_decode($langdata);
-    setcookie("lang", $langdata);
+    setcookie("lang", $defaultLang);
 }
 
-if (!isset($_SESSION["ID"])) {
+if (!isset($_SESSION["ID"]) && !isset($_SESSION["token"])) {
     Functions::go(ADMIN . "login");
-
 }

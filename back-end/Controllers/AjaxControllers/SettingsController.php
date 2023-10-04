@@ -2,13 +2,14 @@
 
 @session_start();
 ob_start();
-include_once("../../class/up.php");
-include_once("../../class/DB.php");
-include_once("../../class/Users.php");
-include_once("../../actions/functions.php");
-include_once("../../actions/config.php");
-include_once("../../actions/security.php");
-include_once("../../class/CSRF.php");
+$path = "../../";
+include_once($path."class/up.php");
+include_once($path."class/DB.php");
+include_once($path."class/Users.php");
+include_once($path."actions/functions.php");
+include_once($path."actions/config.php");
+include_once($path."actions/security.php");
+include_once($path."class/CSRF.php");
 $settings = DB::table("settings")->where("ID", 1)->first();
 
 define("ADMIN", $settings->adminUrl);
@@ -19,7 +20,7 @@ define("DATA", FRONT_END . "data/");
 define("PAGE", FRONT_END . "includes/");
 define("IMG", FRONT_END . "assets/images/");
 
-$path = "../../";
+
 
 if ($_POST) {
     $type = Security::getSecurity($_POST["type"]);
@@ -43,6 +44,7 @@ if ($_POST) {
 
                     if ($update) {
                         echo "ok";
+                        
                     } else {
                         echo "error";
                     }

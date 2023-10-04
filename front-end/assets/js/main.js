@@ -163,3 +163,21 @@ $(document).ready(function () {
     });
 });
 
+function copyText($textClass,$ID) {
+    var textToCopy = document.querySelector('.'+$textClass).innerText;
+    var tempInput = document.createElement('input');
+    tempInput.setAttribute('value', textToCopy);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    var iconElement = document.getElementById('copy-icon-'+$ID);
+    iconElement.classList.remove('fa-copy');
+    iconElement.classList.add('fa-check');
+
+    setTimeout(function() {
+        iconElement.classList.remove('fa-check');
+        iconElement.classList.add('fa-copy');
+    }, 2000);
+}

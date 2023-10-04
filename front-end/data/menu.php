@@ -155,7 +155,7 @@ $value = DB::table("settings")->where("ID", 1)->first();
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="widgets.html">
+                    <a class="nav-link menu-link" href="<?=ADMIN?>bank-accounts">
                         <i class="fa-solid fa-building-columns"></i> <span data-key="t-widgets">
                             <?= $langdata->bank_accounts ?>
                         </span>
@@ -189,7 +189,7 @@ $value = DB::table("settings")->where("ID", 1)->first();
                         <?= $langdata->entegration_settings ?>
                     </span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="widgets.html">
+                    <a class="nav-link menu-link" href="<?=ADMIN?>marketplace-entegrations">
                         <i class="ri-shopping-bag-2-line"></i> <span data-key="t-widgets">
                             <?= $langdata->marketplace_entegration ?>
                         </span>

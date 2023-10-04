@@ -9,4 +9,6 @@ RewriteRule ^general-settings$ index.php?page=general-settings [L,NC]
 RewriteRule ^logo-settings$ index.php?page=logo-settings [L,NC]
 RewriteRule ^contact-settings$ index.php?page=contact-settings [L,NC]
 RewriteRule ^hosting-settings$ index.php?page=hosting-settings [L,NC]
+RewriteRule ^marketplace-entegrations$ index.php?page=marketplace-entegrations [L,NC]
+RewriteRule ^bank-accounts$ index.php?page=bank-accounts [L,NC]
 

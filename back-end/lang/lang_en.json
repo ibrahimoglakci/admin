@@ -2,6 +2,7 @@
     "search": "Search...",
     "addproduct": "Add Product",
     "goodmorning": "Good Morning,",
+    "settings" : "Settings",
     "system_settings": "System Settings",
     "orders": "Orders",
     "general_settings": "General Settings",
@@ -60,6 +61,5 @@
     "login_entegration" : "Login Integrations",
     "sms_entegration" : "Message Integrations",
     "go_to_page" : "Go to Page"
-    
 }
   
