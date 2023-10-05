@@ -2,14 +2,14 @@
 
 class API {
 
-    
+
     public static function fetch($method, $url, $data = array()) {
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
-            die("Geçersiz URL: " . $url);
+            die("Unknown URL: " . $url);
         }
 
         if (!in_array($method, ['GET', 'POST', 'PUT', 'DELETE'])) {
-            die("Geçersiz metod: " . $method);
+            die("Unknown Method: " . $method);
         }
 
         $ch = curl_init();
@@ -47,7 +47,7 @@ class API {
         $jsonResponse = json_decode($response, true);
 
         if (is_null($jsonResponse) || json_last_error() != JSON_ERROR_NONE) {
-            die("Geçersiz JSON yanıtı");
+            die("Unknown JSON Response");
         }
 
         return $jsonResponse;
