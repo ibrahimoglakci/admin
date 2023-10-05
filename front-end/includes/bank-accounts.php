@@ -47,7 +47,7 @@
                 <div class="col-xl-3 col-lg-6">
                     <div class="card ribbon-box right overflow-hidden">
                         <div class="card-body text-center p-4">
-                            <img src="<?= IMG ?>banks/<?= $bank->logo ?>" alt="" height="45">
+                            <img src="<?= IMG ?>banks/<?= $bank->logo ?>" alt="" height="45" width="220">
                             <h5 class="mb-1 mt-4"><a href="javascript:void(0);" class="link-primary"><?= $bank->Name ?></a></h5>
                             <div class="d-inline-flex gap-2 pt-3">
                                 <i id="copy-icon-<?=$bank->ID?>" class="fa-solid fa-copy" onclick="copyText('iban', <?=$bank->ID?>);"></i>
