@@ -9,7 +9,7 @@ include_once("back-end/actions/functions.php");
 include_once("back-end/actions/config.php");
 include_once("back-end/class/CSRF.php");
 include_once("back-end/class/BankAccounts.php");
-include_once("back-end/class/API.php");
+include_once("back-end/class/HTTP.php");
 $settings = DB::table("settings")->where("ID", 1)->first();
 
 define("ADMIN", $settings->adminUrl);

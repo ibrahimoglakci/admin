@@ -12,6 +12,7 @@ RewriteRule ^hosting-settings$ index.php?page=hosting-settings [L,NC]
 RewriteRule ^marketplace-entegrations$ index.php?page=marketplace-entegrations [L,NC]
 RewriteRule ^bank-accounts$ index.php?page=bank-accounts [L,NC]
 
+
 # Enable compression
 <IfModule mod_deflate.c>
     <IfModule mod_filter.c>
