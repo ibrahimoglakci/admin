@@ -1,3 +1,4 @@
+<title><?= $langdata->logo_settings ?> | <?=$webTitle?></title>
 <?php
 $value = DB::table("settings")->where("ID", 1)->first();
 if ($value) {

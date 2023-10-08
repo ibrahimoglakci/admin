@@ -8,7 +8,7 @@ include_once("back-end/class/Users.php");
 include_once("back-end/actions/functions.php");
 include_once("back-end/actions/config.php");
 include_once("back-end/class/CSRF.php");
-include_once("back-end/class/BankAccounts.php");
+include_once("back-end/class/Values.php");
 include_once("back-end/class/HTTP.php");
 $settings = DB::table("settings")->where("ID", 1)->first();
 
@@ -21,6 +21,13 @@ define("PAGE", FRONT_END . "includes/");
 define("IMG", FRONT_END . "assets/images/");
 define("CLASSES", BACK_END . "class/");
 
+$webTitle = $settings->websiteTitle;
+$webDescription = $settings->websiteDescription;
+$webKeywords = $settings->websiteKeywords;
+$webSmLogoDark = $settings->websiteLogo_dark_sm;
+$webSmLogoLight = $settings->websiteLogo_light_sm;
+$webWmLogoLight = $settings->websiteLogo_light_wm;
+$webWmLogoDark = $settings->websiteLogo_dark_wm;
 
 
 if (isset($_COOKIE["lang"])) {

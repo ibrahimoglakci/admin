@@ -1,3 +1,4 @@
+<title><?= $langdata->profile ?> | <?=$webTitle?></title>
 <div class="page-content">
     <div class="container-fluid">
         <div class="profile-foreground position-relative mx-n4 mt-n4">

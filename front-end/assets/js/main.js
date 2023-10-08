@@ -181,3 +181,5 @@ function copyText($textClass,$ID) {
         iconElement.classList.add('fa-copy');
     }, 2000);
 }
+
+

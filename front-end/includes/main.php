@@ -1,4 +1,4 @@
-
+<title><?= $langdata->home_page ?> | <?=$webTitle?></title>
 <div class="page-content">
                 <div class="container-fluid">
 

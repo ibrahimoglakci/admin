@@ -60,7 +60,8 @@
     "payment_entegration" : "Zahlungsintegrationen",
     "login_entegration" : "Login-Integrationen",
     "sms_entegration" : "Nachrichtenintegrationen",
-    "go_to_page" : "Gehe zu Seite"
+    "go_to_page" : "Gehe zu Seite",
+    "home_page" : "Startseite"
     
 }
   

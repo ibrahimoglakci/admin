@@ -1,3 +1,4 @@
+<title><?= $langdata->contact_settings ?> | <?=$webTitle?></title>
 <?php
 
 $values = DB::table("settings")->whereRaw("ID=?", [1])->first();

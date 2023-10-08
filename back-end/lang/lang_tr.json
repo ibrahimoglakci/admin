@@ -64,6 +64,8 @@
     "hosting_mail" : "E-Posta Adresi (Müşterilere Posta Göndermek İçin Kullanılacak)",
     "hosting_password" : "E-Posta Şifre",
     "hosting_host" : "Mail Host",
-    "hosting_port" : "Sunucu Port"
+    "hosting_port" : "Sunucu Port",
+    "home_page" : "Ana Sayfa"
+    
 }
   

@@ -1,3 +1,4 @@
+<title><?= $langdata->marketplace_entegration ?> | <?=$webTitle?></title>
 <?php include_once("front-end/modals/EntegrationModals.php"); ?>
 
 

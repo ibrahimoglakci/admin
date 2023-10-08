@@ -1,4 +1,5 @@
 <?php include_once("front-end/modals/BankAccountsModal.php"); ?>
+<title><?= $langdata->bank_accounts ?> | <?= $webTitle ?></title>
 
 <!-- start page title -->
 <div class="page-content">
@@ -19,44 +20,40 @@
             </div>
         </div>
         <!-- end page title -->
-        <div class="card">
-            <div class="card-header border-0 rounded">
-                <div class="row g-2">
-
-                    <!--end col-->
-
-                    <!--end col-->
-                    <div class="col-lg-12">
-                        <div class="hstack gap-2" style="float: right;">
-                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addSeller"><i class="ri-add-fill me-1 align-bottom"></i> Add Seller</button>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-        </div>
 
         <div class="row mt-4">
             <?php
-            $banks = BankAccounts::all();
+            $banks = Values::values("bank_accounts");
             foreach ($banks as $bank) {
 
 
             ?>
                 <div class="col-xl-3 col-lg-6">
                     <div class="card ribbon-box right overflow-hidden">
+                        <div class="alert border-0 rounded-top rounded-0 m-0 d-flex align-items-center" role="alert" style="background-color: #3085C3; color: #fff;">
+                            <div class="flex-grow-1">
+
+                            </div>
+                            <div class="flex-shrink-0">
+                                <!-- Switch sizes -->
+                                <div class="form-check form-switch form-switch-md form-switch-success" dir="ltr">
+                                    <input type="checkbox" class="form-check-input" id="bankSwitch">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card-body text-center p-4">
                             <img src="<?= IMG ?>banks/<?= $bank->logo ?>" alt="" height="45" width="220">
                             <h5 class="mb-1 mt-4"><a href="javascript:void(0);" class="link-primary"><?= $bank->Name ?></a></h5>
                             <div class="d-inline-flex gap-2 pt-3">
-                                <i id="copy-icon-<?=$bank->ID?>" class="fa-solid fa-copy" onclick="copyText('iban', <?=$bank->ID?>);"></i>
+                                <i id="copy-icon-<?= $bank->ID ?>" class="fa-solid fa-copy" onclick="copyText('iban', <?= $bank->ID ?>);"></i>
                                 <p class="text-muted mb-4 iban"><?= $bank->iban ?></p>
                             </div>
 
 
                             <div class="mt-2">
-                                <a href="javascript:void(0);" class="btn btn-danger w-100">Delete Account</a>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bank-<?=$bank->ID?>">Settings</button>
+                                <a href="javascript:void(0);" class="btn btn-danger">Delete Account</a>
                             </div>
                         </div>
                     </div>
