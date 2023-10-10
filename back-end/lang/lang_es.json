@@ -61,6 +61,10 @@
     "login_entegration" : "Integraciones de inicio de sesión",
     "sms_entegration" : "Integraciones de mensajes",
     "go_to_page" : "Ir a la página",
-    "home_page" : "Página de inicio"
+    "home_page" : "Página de inicio",
+    "hosting_mail": "Dirección de correo electrónico (Para enviar correos a los clientes)",
+    "hosting_password": "Contraseña de correo electrónico",
+    "hosting_host": "Servidor de correo",
+    "hosting_port": "Puerto del servidor"
 }
   
